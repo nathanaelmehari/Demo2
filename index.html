@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+       .hidden { display: none; }
+      .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (min-width: 1200px) {
+            .al{
+                margin-left: 300px;
+                width: 300px;
+                height: 80px;
+            }
+            .al2{
+                display: inline;
+                margin-left: 460px;
+                width: 320px;
+                height: 80px;
+            }
+            .se {
+                overflow-y: hidden;
+            }
+            
+
+        }
+        @media (max-width: 768px) {
+            .v{
+                display: none;
+            }
+            .t{
+                margin-top: 20%;
+            }
+          
+            .mm{
+                background: linear-gradient(to bottom, rgba(0, 0, 17, 0.075), #434343), 
+                url('./2d2f536c-4ca8-4259-a95e-926fd335d750_removalai_preview.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+           
+
+        }
+    
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-gray-800">Noble Engineering</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+                    <a href="#products" class="text-gray-600 hover:text-gray-900">Products</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-gray-900">Testimonials</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-gray-800 focus:outline-none text-2xl">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sidebar Menu for Mobile -->
+    <div id="mobile-menu" class=" fixed inset-0 bg-black bg-opacity-50 hidden">
+        <div class="bg-white w-64 h-full p-5">
+            <button id="close-menu" class="text-right w-full text-gray-600 text-xl">&times;</button>
+            <nav class="flex flex-col space-y-4 mt-4">
+                <a id="about-link" href="#about" class="pt-[50px] text-gray-600 hover:text-gray-900">About</a>
+                <a href="#products" class="pt-[50px] text-gray-600 hover:text-gray-900">Products</a>
+                <a href="#contact" class="pt-[50px] text-gray-600 hover:text-gray-900">Contact</a>
+                <a href="#testimonials" class="pt-[50px] text-gray-600 hover:text-gray-900">Testimonials</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Home page -->
+    <main class=" mm max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="flex flex-col md:flex-row items-center py-16">
+            <div class="t md:w-1/2 text-center md:text-left">
+                <h1 class="text-[40px] text-white sm:text-black font-bold">Welcome to our Furniture Store</h1>
+                <p class="mt-4 p text-white sm:text-gray-600">With a range of furnitures, Find the best to match your style and comfort.</p>
+                <a href="#products" class="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Shop Now</a>
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+                <img src="2d2f536c-4ca8-4259-a95e-926fd335d750_removalai_preview.png" alt="Furniture Image" class="v border-none rounded-lg">
+            </div>
+        </section>
+    </main>
+    <!-- About Page -->
+    
+        <div id="about" class=" w-[100vw] bg-white shadow-lg rounded-lg p-10 md:p-16 flex flex-col md:flex-row">
+            <!-- Left Side (Heading) -->
+            <div class="md:w-1/2">
+                <h3 class="text-sm uppercase text-gray-500 font-semibold">About Company</h3>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mt-2 leading-tight">
+                    We Create <br> and Turn Into <br> Reality
+                </h1>
+                <div class="w-12 h-1 bg-orange-500 mt-4"></div>
+            </div>
+    
+            <!-- Right Side (Description) -->
+            <div class="md:w-1/2 mt-6 md:mt-0">
+                <p class="text-gray-600 text-lg">
+                    We apply innovative design solutions to enhance people’s residential well-being and help workplaces succeed! 
+                    Our team collaborates with clients to ensure their vision comes to life.
+                </p>
+                <p class="text-gray-600 text-lg mt-4">
+                    With expertise in furniture craftsmanship, we deliver outstanding designs that balance aesthetics, functionality, and sustainability. 
+                    From concept to execution, our team ensures the highest standards in every project.
+                </p>
+            </div>
+        </div>
+    <!--General Products-->
+    <div class="bg-gray-100 se">
+        <section class="py-12 se flex">
+          <div class="container items-center mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Services <div class="inline-block bg-red-500 h-[20px] w-[20px] rounded-full"></div></h2>
+            <div class="w-12 h-1 bg-orange-500 mt-4"></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <!-- House Furniture -->
+              <div class="relative bg-cover bg-center shadow-lg rounded-lg h-80" style="background-image: url('./table.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg flex flex-col justify-end p-4">
+                  <h3 class="text-xl font-bold text-white">House Furniture</h3>
+                  
+                </div>
+              </div>
+      
+              <!-- Modern Kitchens -->
+              <div class="cr relative bg-cover bg-center shadow-lg rounded-lg h-80" style="background-image: url('./kitchen.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg flex flex-col justify-end p-4">
+                  <h3 class="text-xl font-semibold text-white">Modern Kitchens</h3>
+                </div>
+              </div>
+      
+              <!-- Office Furniture -->
+              <div class="cr relative bg-cover bg-center shadow-lg rounded-lg h-80" style="background-image: url('office.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg flex flex-col justify-end p-4">
+                  <h3 class="text-xl font-semibold text-white">Office Furniture</h3>
+                </div>
+              </div>
+      
+              <!-- Metal Works -->
+              <div class="cr relative bg-cover bg-center shadow-lg rounded-lg h-80" style="background-image: url('./metal\ chair.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg flex flex-col justify-end p-4">
+                  <h3 class="text-xl font-semibold text-white">Metal Works</h3>
+                </div>
+              </div>
+      
+              <!-- Aluminium Chairs -->
+              <div class="al cr  relative bg-cover bg-center shadow-lg rounded-lg h-80" style="background-image: url('./metal\ chair.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg flex flex-col justify-end p-4">
+                  <h3 class="text-xl font-semibold text-white">Aluminium Chairs and Windows</h3>
+                </div>
+              </div>
+             
+              
+            </div>
+      
+            <div class="text-center mt-8">
+              <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">See More</button>
+            </div>
+          </div>
+        </section>
+    </div>
+    <!--Why Us-->
+    <section id="why" class="service py-12 bg-white"> 
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Why work with <span class="text-red-500">Us</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="services">
+                <!-- Service Items -->
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://img.icons8.com/?size=512w&id=49238&format=png" alt="Currency Wallet Icon" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Warranty</h3>
+                    <p class="text-gray-500 mb-4">We provide a two-year warranty covering any damage to your furniture.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://img.icons8.com/?size=50&id=n8ZcLFo6skTx&format=png" alt="Security Storage Icon" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Free Delivery</h3>
+                    <p class="text-gray-500 mb-4">After purchasing furniture from our store, we will deliver it to your location at no additional cost.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://img.icons8.com/?size=80&id=42335&format=png" alt="Expert Support Icon" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Design</h3>
+                    <p class="text-gray-500 mb-4">With our dedicated team of architects, we will assist you in designing your ideal furniture to perfectly match your vision.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://www.shutterstock.com/shutterstock/photos/772897276/display_1500/stock-vector-approval-check-vector-icon-772897276.jpg" alt="Expert Support Icon" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Quality</h3>
+                    <p class="text-gray-500 mb-4">Our furniture is of exceptional quality and crafted from premium materials.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img class="w-[40px] h-[40px]" src="https://img.icons8.com/?size=80&id=58663&format=png">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">On time delivery</h3>
+                    <p class="text-gray-500 mb-4">We guarantee punctual and reliable delivery of our furniture.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 fade-in">
+                    <div class="flex justify-center mb-4">
+                        <img class="w-[40px] h-[40px]" src="https://img.icons8.com/?size=50&id=8034&format=png">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Showrooms</h3>
+                    <p class="text-gray-500 mb-4">You are welcome to visit our showrooms to explore our designs in person.</p>
+                    <a class="text-red-500 font-semibold hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Discount-->
+    <section class="container mx-auto mt-8">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 pb-[40px] leading-tight">
+            Discount
+        </h1>
+        <div class="grid grid-cols-2 gap-6">
+            <!-- Product 1 -->
+            <div class="bg-white p-4 shadow-lg rounded-lg relative">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</span>
+                <img src="kitchen.jpg" alt="Red T-shirt" class="w-full h-48 object-contain">
+                <p class="mt-4 text-gray-800">Kitchen Furnitures</p>
+                <p class="text-red-600 text-lg font-semibold text-gray-800">50% off</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="metal chair.jpg" alt="Blue T-shirt" class="w-full h-48 object-contain">
+                <p class="mt-4 text-gray-800">Metal Furnitures</p>
+                <p class="text-red-600 text-lg font-semibold text-gray-800">50% off</p>
+            </div>
+        </div>
+    </section>
+    <!--Products-->
+    <section class="container mx-auto mt-8">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 pb-[40px] leading-tight">
+            Products
+        </h1>
+        <div class="flex justify-center space-x-4 mb-6">
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="all">All</button>
+            <button class="filter-btn  text-gray-800 px-4 py-2 rounded" data-category="app">Chairs</button>
+            <button class="filter-btn  text-gray-800 px-4 py-2 rounded" data-category="card">Tables</button>
+            <button class="filter-btn  text-gray-800 px-4 py-2 rounded" data-category="web">Web</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- All Category -->
+            <div class="item app bg-white p-4 shadow-lg rounded-lg">
+                <img src="metal chair.jpg" alt="App 1" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Chair</h2>
+            </div>
+
+            <div class="item card bg-white p-4 shadow-lg rounded-lg">
+                <img src="table.jpg" alt="Card 1" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Table</h2>
+            </div>
+
+            <div class="item web bg-white p-4 shadow-lg rounded-lg">
+                <img src="kitchen.jpg" alt="Web 1" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Web 1</h2>
+            </div>
+
+            <div class="item app bg-white p-4 shadow-lg rounded-lg">
+                <img src="metal chair.jpg" alt="App 2" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Chair</h2>
+            </div>
+
+            <div class="item card bg-white p-4 shadow-lg rounded-lg">
+                <img src="table.jpg" alt="Card 2" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Table</h2>
+            </div>
+
+            <div class="item web bg-white p-4 shadow-lg rounded-lg">
+                <img src="kitchen.jpg" alt="Web 2" class="w-full h-48 object-cover rounded">
+                <h2 class="mt-4 text-lg font-semibold text-gray-800">Web 2</h2>
+            </div>
+        </div>
+    </section>
+    <!--Testimonials-->
+    <div class="bg-gray-100">
+        <div class="max-w-6xl mx-auto py-12">
+            <h2 class="text-4xl font-semibold text-gray-900 text-center mb-8">
+                Testimonial <span class="border-b-4 border-red-500 inline-block w-16"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 px-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Person" class="w-16 h-16 rounded-full border-4 border-red-500">
+                        <div>
+                            <h3 class="text-lg font-bold">John Doe</h3>
+                            <p class="text-red-500">Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Person" class="w-16 h-16 rounded-full border-4 border-red-500">
+                        <div>
+                            <h3 class="text-lg font-bold">Jane Smith</h3>
+                            <p class="text-red-500">Graphic Designer</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeButton = document.getElementById('close-menu');
+        const about = document.getElementById('about-link')
+        const buttons = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.item');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+
+                buttons.forEach(btn => btn.classList.remove('bg-red-500', 'text-white'));
+                button.classList.add('bg-red-500', 'text-white');
+
+                items.forEach(item => {
+                    if (category === 'all') {
+                        item.classList.remove('hidden');
+                    } else {
+                        if (item.classList.contains(category)) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            elements.forEach(el => observer.observe(el));
+        });
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '×';
+        });
+        about.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.textContent = '';
+        })
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.textContent = '';
+        });
+    </script>
+</body>
+</html>
